@@ -1,1 +1,1 @@
-docker build --build-arg plugins=$VAR -t $IMAGE_NAME .
+docker build --build-arg plugins=$plugins -t $IMAGE_NAME .
