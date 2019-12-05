@@ -11,4 +11,4 @@ RUN curl https://getcaddy.com | bash -s personal $plugins
 RUN caddy -version
 RUN caddy -plugins
 
-CMD ["caddy", "--conf", "/etc/Caddyfile", "--log", "stdout", "--agree"]
+CMD ["caddy", "--conf", "/etc/caddy/Caddyfile", "--log", "stdout", "--agree", "-email", "$MAIL"]
