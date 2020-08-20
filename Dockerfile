@@ -47,7 +47,4 @@ WORKDIR /srv
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY index.html /srv/index.html
 
-# install process wrapper
-COPY --from=builder /go/bin/parent /bin/parent
-
 CMD ["caddy", "--conf", "/etc/caddy/Caddyfile", "--log", "stdout", "--agree=$ACME_AGREE", "-email", "$MAIL"]
