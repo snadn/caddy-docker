@@ -7,6 +7,8 @@ ARG version="v1.0.5"
 ARG plugins="cloudflare,dnspod,cache,cors,expires,filter,forwardproxy,grpc,ipfilter,jwt,login,mailout,minify,nobots,permission,proxyprotocol,ratelimit,realip,webdav"
 ARG enable_telemetry="true"
 
+RUN wget https://raw.githubusercontent.com/snadn/caddy-docker/master/builder/builder.sh -O /usr/bin/builder.sh
+
 RUN VERSION=${version} PLUGINS=${plugins} ENABLE_TELEMETRY=${enable_telemetry} /bin/sh /usr/bin/builder.sh
 
 #
