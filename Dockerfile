@@ -3,7 +3,7 @@
 #
 FROM abiosoft/caddy:builder as builder
 
-ARG version="v1.0.5"
+ARG version="v1.0.3"
 ARG plugins="cloudflare,dnspod,cache,cors,expires,filter,forwardproxy,grpc,ipfilter,jwt,login,mailout,minify,nobots,permission,proxyprotocol,ratelimit,realip,webdav"
 ARG enable_telemetry="true"
 
